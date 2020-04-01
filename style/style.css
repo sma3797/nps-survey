@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f8fa;
+  padding: 16px;
+  color: #575757;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto;
+  text-align: center;
+  -webkit-box-shadow: 0px 0 12px #c1c1c1;
+          box-shadow: 0px 0 12px #c1c1c1;
+  border-radius: 4px;
+  background-color: white;
+  padding: 18px;
+}
+
+.logo {
+  margin: 22px auto;
+}
+
+.question {
+  margin: 10px auto 20px;
+}
+
+.likely {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 13px;
+}
+
+.likely p {
+  color: #7a7a7a;
+}
+
+.input {
+  margin: 8px 2px 2px;
+  width: 30px;
+  cursor: pointer;
+  background-color: #e90202;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 60px;
+  font-size: 12px;
+  outline: 0;
+  -webkit-box-shadow: 0px 0 2px #8d8d8d;
+          box-shadow: 0px 0 2px #8d8d8d;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.scale {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.input1 {
+  background-color: #e73839;
+}
+
+.input2 {
+  background-color: #f44749;
+}
+
+.input3 {
+  background-color: #fc664b;
+}
+
+.input4 {
+  background-color: #fe8745;
+}
+
+.input5 {
+  background-color: #fea73e;
+}
+
+.input6 {
+  background-color: #ffc21f;
+}
+
+.input7 {
+  background-color: #e3c517;
+}
+
+.input8 {
+  background-color: #c0cb0f;
+}
+
+.input9 {
+  background-color: #7ccb00;
+}
+
+.input10 {
+  background-color: #31ab00;
+}
+
+.gray {
+  background-color: #d2d2d2;
+}
+
+.queryForm {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.01s linear;
+  transition: all 0.01s linear;
+}
+
+.sites-button {
+  margin: 20px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.sites-button button {
+  width: 140px;
+  margin: 8px auto;
+  border-radius: 8px;
+  padding: 12px 18px;
+  border: none;
+  outline: 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+.Yelp {
+  background-color: #cd2222;
+}
+
+.Facebook {
+  background-color: #3d548f;
+}
+
+.Google {
+  background-color: #4484ea;
+}
+
+.height {
+  height: auto;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.text-area {
+  margin: 20px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.text-area-input::-webkit-input-placeholder {
+  font-size: 13px;
+}
+
+.text-area-input:-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.text-area-input::-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.text-area-input::placeholder {
+  font-size: 13px;
+}
+
+.text-area-input {
+  color: #3a3a3a;
+  font-weight: normal;
+  resize: vertical;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.query-button {
+  margin: 10px auto;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  background-color: #195cd8;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.query-button:hover {
+  background-color: #3d81ff;
+}
+
+@media (min-width: 700px) {
+  .container {
+    margin: 80px auto;
+    width: 680px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
