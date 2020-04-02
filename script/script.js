@@ -41,6 +41,7 @@ submit.forEach((item) => {
 		if (item.lastElementChild) {
 			item.disabled = true;
 			thankyou.classList.add("display");
+			reset.style.display = "none";
 			for (let key in input) {
 				input[key].disabled = true;
 			}

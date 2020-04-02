@@ -103,10 +103,6 @@ a {
         transform: scale(1);
     }
 
-    &:hover {
-        transform: scale(1.2);
-    }
-
     &:not(:disabled):hover {
         background-color: #f44749;
         transform: scale(1.2);
@@ -323,6 +319,7 @@ a {
 
 .thankyou {
     display: none;
+
 }
 
 #reset {
