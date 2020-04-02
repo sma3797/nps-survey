@@ -10,7 +10,15 @@ body {
   background-color: #f8f8fa;
   padding: 16px;
   color: #575757;
-  -webkit-touch-callout: none;
+}
+
+button,
+textarea,
+input,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -62,10 +70,13 @@ body {
   border-radius: 60px;
   font-size: 12px;
   outline: 0;
-  -webkit-box-shadow: 0px 0 2px #8d8d8d;
-          box-shadow: 0px 0 2px #8d8d8d;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+
+.input:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input:disabled {
@@ -81,7 +92,15 @@ body {
   background-color: #e73839;
 }
 
+.input1:hover {
+  background-color: #e73839;
+}
+
 .input2 {
+  background-color: #f44749;
+}
+
+.input2:hover {
   background-color: #f44749;
 }
 
@@ -89,7 +108,15 @@ body {
   background-color: #fc664b;
 }
 
+.input3:hover {
+  background-color: #fc664b;
+}
+
 .input4 {
+  background-color: #fe8745;
+}
+
+.input4:hover {
   background-color: #fe8745;
 }
 
@@ -97,7 +124,15 @@ body {
   background-color: #fea73e;
 }
 
+.input5:hover {
+  background-color: #fea73e;
+}
+
 .input6 {
+  background-color: #ffc21f;
+}
+
+.input6:hover {
   background-color: #ffc21f;
 }
 
@@ -105,7 +140,15 @@ body {
   background-color: #e3c517;
 }
 
+.input7:hover {
+  background-color: #e3c517;
+}
+
 .input8 {
+  background-color: #c0cb0f;
+}
+
+.input8:hover {
   background-color: #c0cb0f;
 }
 
@@ -113,7 +156,15 @@ body {
   background-color: #7ccb00;
 }
 
+.input9:hover {
+  background-color: #7ccb00;
+}
+
 .input10 {
+  background-color: #31ab00;
+}
+
+.input10:hover {
   background-color: #31ab00;
 }
 
@@ -232,6 +283,15 @@ body {
 
 .query-button:hover {
   background-color: #3d81ff;
+}
+
+#reset {
+  font-size: 11px;
+  margin: 0px auto 0;
+  color: #3d81ff;
+  cursor: pointer;
+  display: none;
+  background-color: transparent;
 }
 
 @media (min-width: 700px) {
