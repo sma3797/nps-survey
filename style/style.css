@@ -74,11 +74,6 @@ a {
   transition: all 0.2s linear;
 }
 
-.input:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .input:disabled {
   cursor: not-allowed;
 }
@@ -92,84 +87,164 @@ a {
   background-color: #e73839;
 }
 
-.input1:hover {
+.input1:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input1:not(:disabled):hover {
   background-color: #e73839;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input2 {
   background-color: #f44749;
 }
 
+.input2:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .input2:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.input2:not(:disabled):hover {
   background-color: #f44749;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input3 {
   background-color: #fc664b;
 }
 
-.input3:hover {
+.input3:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input3:not(:disabled):hover {
   background-color: #fc664b;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input4 {
   background-color: #fe8745;
 }
 
-.input4:hover {
+.input4:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input4:not(:disabled):hover {
   background-color: #fe8745;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input5 {
   background-color: #fea73e;
 }
 
-.input5:hover {
+.input5:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input5:not(:disabled):hover {
   background-color: #fea73e;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input6 {
   background-color: #ffc21f;
 }
 
-.input6:hover {
+.input6:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input6:not(:disabled):hover {
   background-color: #ffc21f;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input7 {
   background-color: #e3c517;
 }
 
-.input7:hover {
+.input7:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input7:not(:disabled):hover {
   background-color: #e3c517;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input8 {
   background-color: #c0cb0f;
 }
 
-.input8:hover {
+.input8:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input8:not(:disabled):hover {
   background-color: #c0cb0f;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input9 {
   background-color: #7ccb00;
 }
 
-.input9:hover {
+.input9:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input9:not(:disabled):hover {
   background-color: #7ccb00;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .input10 {
   background-color: #31ab00;
 }
 
-.input10:hover {
+.input10:not(:disabled) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.input10:not(:disabled):hover {
   background-color: #31ab00;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .gray {
   background-color: #d2d2d2;
+}
+
+.gray:not(:disabled):hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .queryForm {
@@ -183,24 +258,10 @@ a {
 
 .sites-button {
   margin: 20px auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
 }
 
 .sites-button button {
-  width: 140px;
-  margin: 8px auto;
-  border-radius: 8px;
-  padding: 12px 18px;
   border: none;
   outline: 0;
   color: white;
@@ -214,6 +275,21 @@ a {
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
+  margin: 8px auto;
+  border-radius: 8px;
+}
+
+.sites-button button a {
+  width: 140px;
+  padding: 12px 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: white;
+  text-decoration: none;
 }
 
 .Yelp {
@@ -226,6 +302,29 @@ a {
 
 .Google {
   background-color: #4484ea;
+}
+
+.query-button {
+  margin: 10px auto;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  background-color: #195cd8;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit:disabled {
+  background-color: gray;
+}
+
+.submit:disabled:hover {
+  background-color: gray;
+}
+
+.query-button:hover {
+  background-color: #3d81ff;
 }
 
 .height {
@@ -270,19 +369,8 @@ a {
           box-sizing: border-box;
 }
 
-.query-button {
-  margin: 10px auto;
-  padding: 8px 12px;
-  border-radius: 6px;
-  color: white;
-  background-color: #195cd8;
-  border: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.query-button:hover {
-  background-color: #3d81ff;
+.thankyou {
+  display: none;
 }
 
 #reset {
@@ -290,8 +378,10 @@ a {
   margin: 0px auto 0;
   color: #3d81ff;
   cursor: pointer;
-  display: none;
-  background-color: transparent;
+}
+
+.display {
+  display: block;
 }
 
 @media (min-width: 700px) {

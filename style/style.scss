@@ -24,12 +24,6 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    &:focus {
-        outline: none !important;
-        border: none !important;
-        outline-style: none;
-    }
 }
 
 .container {
@@ -75,10 +69,10 @@ a {
     transition: all 0.2s linear;
 }
 
-.input:hover {
-    // background-color: red;
-    transform: scale(1.2);
-}
+// .input:not(:disable):hover {
+//     // background-color: red;
+//     transform: scale(1.2);
+// }
 
 .input:disabled {
     cursor: not-allowed;
@@ -92,85 +86,143 @@ a {
 .input1 {
     background-color: #e73839;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #e73839;
+        transform: scale(1.2);
     }
 }
 
 .input2 {
     background-color: #f44749;
 
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
     &:hover {
+        transform: scale(1.2);
+    }
+
+    &:not(:disabled):hover {
         background-color: #f44749;
+        transform: scale(1.2);
     }
 }
 
 .input3 {
     background-color: #fc664b;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #fc664b;
+        transform: scale(1.2);
     }
 }
 
 .input4 {
     background-color: #fe8745;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #fe8745;
+        transform: scale(1.2);
     }
 }
 
 .input5 {
     background-color: #fea73e;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #fea73e;
+        transform: scale(1.2);
     }
 }
 
 .input6 {
     background-color: #ffc21f;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #ffc21f;
+        transform: scale(1.2);
     }
 }
 
 .input7 {
     background-color: #e3c517;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #e3c517;
+        transform: scale(1.2);
     }
 }
 
 .input8 {
     background-color: #c0cb0f;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #c0cb0f;
+        transform: scale(1.2);
     }
 }
 
 .input9 {
     background-color: #7ccb00;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #7ccb00;
+        transform: scale(1.2);
     }
 }
 
 .input10 {
     background-color: #31ab00;
 
-    &:hover {
+    &:not(:disabled) {
+        transform: scale(1);
+    }
+
+    &:not(:disabled):hover {
         background-color: #31ab00;
+        transform: scale(1.2);
     }
 }
 
 .gray {
     background-color: #d2d2d2;
+
+    &:not(:disabled):hover {
+        transform: scale(1.2);
+    }
 }
 
 
@@ -183,16 +235,10 @@ a {
 
 .sites-button {
     margin: 20px auto 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     width: 100%;
 
     button {
-        width: 140px;
-        margin: 8px auto;
-        border-radius: 8px;
-        padding: 12px 18px;
         border: none;
         outline: 0;
         color: white;
@@ -200,6 +246,17 @@ a {
         justify-content: flex-start;
         align-items: center;
         font-weight: bold;
+        margin: 8px auto;
+        border-radius: 8px;
+
+        a {
+            width: 140px;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: flex-start;
+            color: white;
+            text-decoration: none;
+        }
     }
 }
 
@@ -213,6 +270,31 @@ a {
 
 .Google {
     background-color: #4484ea;
+}
+
+
+
+.query-button {
+    margin: 10px auto;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+    background-color: rgb(25, 92, 216);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit:disabled {
+    background-color: gray;
+
+    &:hover {
+
+        background-color: gray;
+    }
+}
+
+.query-button:hover {
+    background-color: rgb(61, 129, 255);
 }
 
 .height {
@@ -239,18 +321,8 @@ a {
     box-sizing: border-box;
 }
 
-.query-button {
-    margin: 10px auto;
-    padding: 8px 12px;
-    border-radius: 6px;
-    color: white;
-    background-color: rgb(25, 92, 216);
-    border: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.query-button:hover {
-    background-color: rgb(61, 129, 255);
+.thankyou {
+    display: none;
 }
 
 #reset {
@@ -258,8 +330,11 @@ a {
     margin: 0px auto 0;
     color: rgb(61, 129, 255);
     cursor: pointer;
-    display: none;
-    background-color: transparent;
+}
+
+
+.display {
+    display: block;
 }
 
 @media (min-width: 700px) {
