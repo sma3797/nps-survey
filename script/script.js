@@ -1,10 +1,12 @@
+let dripText = document.getElementById("drip-nps-feedback");
+let dripRating = document.getElementById("drip-nps-rating");
 let queryForm = document.getElementsByClassName("queryForm");
 let input = document.getElementsByClassName("input");
 let form = document.getElementById("form");
 let selectEl = 0;
 const thankyou = document.querySelector(".thankyou");
-let textarea = document.getElementById("textarea");
 let submit = document.querySelectorAll(".submit");
+let dripFormSubmission = document.querySelector(".text-area");
 
 let reset = document.getElementById("reset");
 reset.addEventListener("click", () => {
@@ -15,8 +17,8 @@ reset.addEventListener("click", () => {
 		item.disabled = false;
 	});
 	for (let key in input) {
-		textarea.disabled = false;
-		textarea.value = "";
+		dripText.disabled = false;
+		dripText.value = "";
 		input[key].disabled = false;
 	}
 	for (let inde in input) {
@@ -27,6 +29,7 @@ reset.addEventListener("click", () => {
 
 submit.forEach((item) => {
 	item.addEventListener("click", (event) => {
+		console.log(dripFormSubmission);
 		if (!item.lastElementChild) {
 			event.preventDefault();
 			item.disabled = true;
@@ -34,9 +37,9 @@ submit.forEach((item) => {
 			for (let key in input) {
 				input[key].disabled = true;
 			}
-			textarea.disabled = true;
+			dripText.disabled = true;
 			console.log(selectEl, ": on line 38");
-			console.log(textarea.value, ": on line 39");
+			console.log(dripText.value, ": on line 39");
 		}
 		if (item.lastElementChild) {
 			item.disabled = true;
@@ -46,7 +49,7 @@ submit.forEach((item) => {
 				input[key].disabled = true;
 			}
 			console.log(selectEl, ": on line 38");
-			console.log(textarea.value, ": on line 39");
+			console.log(dripText.value, ": on line 39");
 			item.lastElementChild.href.click();
 		}
 	});
@@ -56,6 +59,8 @@ for (let key in input)
 	input[key].addEventListener("click", (event) => {
 		event.preventDefault();
 		selectEl = event.target.value;
+		dripRating.value = selectEl;
+		console.log(dripRating.value);
 		const index = [parseInt(selectEl) - 1];
 
 		if (selectEl <= 8) {

@@ -10,6 +10,8 @@
 		<title>Company - NPS Survey</title>
 		<!-- CSS Stylesheet  -->
 		<link rel="stylesheet" href="./style/style.css" />
+		<!-- Jquery  -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -98,17 +100,95 @@
 				</form>
 			</div>
 			<div class="queryForm">
-				<form class="text-area">
+				<!-- Form submission handling here  ----------------------------  -->
+				<form
+					action="https://www.getdrip.com/forms/73474232/submissions"
+					method="post"
+					data-drip-embedded-form="73474232"
+					data-drip-id="73474232"
+					class="text-area"
+				>
+					<!-- id="textarea" -->
+					<input id="drip-email" type="hidden" name="fields[email]" value="" />
 					<textarea
-						id="textarea"
 						class="text-area-input"
 						rows="4"
 						cols="50"
+						type="text"
+						id="drip-nps-feedback"
+						name="fields[nps_feedback]"
+						value="From web app"
 						placeholder="Our goal is consistent improvement in all possible ways. Can you please take a moment to let us know what we can do to earn a 10?”"
 					></textarea>
-					<button class="query-button submit">Submit</button>
+					<div>
+						<input
+							type="hidden"
+							id="drip-nps-rating"
+							name="fields[nps_rating]"
+							value=""
+						/>
+					</div>
+					<button
+						class="query-button submit"
+						data-drip-attribute="sign-up-button"
+					>
+						Submit Survey
+					</button>
 				</form>
+				<!-- <form
+					action="https://www.getdrip.com/forms/73474232/submissions"
+					method="post"
+					data-drip-embedded-form="73474232"
+				>
+					<h3 data-drip-attribute="headline">NPS Survey</h3>
+					<div data-drip-attribute="description"></div>
+					<div>
+						<label for="drip-email">Email Address</label><br />
+						<input type="email" id="drip-email" name="fields[email]" value="" />
+					</div>
+					<div>
+						<label for="drip-nps-feedback">Feedback</label><br />
+						<input
+							type="text"
+							id="drip-nps-feedback"
+							name="fields[nps_feedback]"
+							value=""
+						/>
+					</div>
+					<div>
+						<label for="drip-nps-rating">rating</label><br />
+						<input
+							type="text"
+							id="drip-nps-rating"
+							name="fields[nps_rating]"
+							value=""
+						/>
+					</div>
+					<div style="display: none;" aria-hidden="true">
+						<label for="website">Website</label><br />
+						<input
+							type="text"
+							id="website"
+							name="website"
+							tabindex="-1"
+							autocomplete="false"
+							value=""
+						/>
+					</div>
+					<div>
+						<input
+							type="submit"
+							value="Sign Up"
+							data-drip-attribute="sign-up-button"
+						/>
+					</div>
+				</form> -->
+
+				<!-- Form submission handling here  ----------------------------  -->
 			</div>
+
+			<!-- For Rating 9 10 seperate submission will be handled  --------------------------------->
+
 			<div class="queryForm sites-button">
 				<p style="font-size: 14px;">Share Your Review on:</p>
 				<button class="Yelp submit">
@@ -136,6 +216,7 @@
 					>
 				</button>
 			</div>
+			<!-- For Rating 9 10 seperate submission will be handled  --------------------------------->
 			<div class="thankyou">
 				<p>Thank You For Your Feedback</p>
 				<p id="reset">Not Satisfied with your review? Change again</p>
@@ -146,5 +227,23 @@
 		<script type="text/javascript" src="./script/script.js"></script>
 		<!-- Font Awesome 5 -->
 		<script type="text/javascript" src="./script/fa5.js"></script>
+		<script>
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+				return results === null
+					? ""
+					: decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+
+			// Get the email address the user has entered
+			email = getParameterByName("drip_email");
+			console.log(email);
+			// Set the hidden email field
+			$(function() {
+				$("#drip_email").attr("value", email);
+			});
+		</script>
 	</body>
 </html>
